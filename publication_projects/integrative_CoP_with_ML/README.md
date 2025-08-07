@@ -19,6 +19,13 @@ Chagas disease, caused by the protozoan parasite *Trypanosoma cruzi*, remains a 
 
 ---
 
+### 📂 Repository Contents – *Start with the Jupyter Notebook*
+- **Notebook**: Jupyter Notebook illustrating the complete analysis workflow. Start here to follow all steps, from exploratory analysis to model evaluation.
+- **Code**: Python scripts to process biomarker data, perform biomarker engineering, train Decision Tree models, evaluate predictive performance with cross-validation, and perform the computational search for a potential integrative correlate of protection.
+- **Data**: Preprocessed datasets for reproducibility.
+
+---
+
 ### 📊 Study Workflow
 
 ![Workflow Figure](images/figure_workflow.png)
@@ -39,13 +46,6 @@ C) **Machine learning analysis** – The dataset was used to train and test a De
 - The pICoP significantly enhanced a simple one-level Decision Tree’s predictive performance:
   - **Accuracy**: ~0.86
   - **AUC-ROC**: ~0.87
-
----
-
-### 📂 Repository Contents
-- **Code**: Python scripts to process biomarker data, perform biomarker engineering, train Decision Tree models, and evaluate predictive performance with cross-validation.
-- **Data**: Preprocessed datasets for reproducibility.
-- **Notebooks**: Jupyter Notebooks illustrating the complete analysis workflow.
 
 ---
 
