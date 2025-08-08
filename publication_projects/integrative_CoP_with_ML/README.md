@@ -6,6 +6,47 @@ This repository contains the code and datasets associated with the research work
 
 ---
 
+### 📂 Repository Contents – *Start with the Jupyter Notebook*
+- **Notebook**: Jupyter Notebook illustrating the complete analysis workflow. Start here to follow all steps, from exploratory analysis to model evaluation.
+- **Code**: Python scripts to process biomarker data, perform biomarker engineering, train Decision Tree models, evaluate predictive performance with cross-validation, and perform the computational search for a potential integrative correlate of protection.
+- **Data**: Preprocessed datasets for reproducibility.
+
+---
+
+### 💻 Repository Code Structure
+
+This repository includes two main Python scripts and one Jupyter Notebook, each with specific roles in the analysis workflow:
+
+- **`notebook_CoPs_ML.ipynb`**  
+  The notebook orchestrates the overall analysis by loading the processed data, invoking the model defined in `biomarker_decision_tree.py`, and running the evaluation workflow. It generates visualizations and summarizes results in an accessible and reproducible format. Ensure that `biomarker_decision_tree.py` is located in the same directory or accessible in the Python path for proper import.
+
+- **`biomarker_decision_tree.py`**  
+  This script defines the `BiomarkerDecisionTree` class, encapsulating the machine learning pipeline for training, validating, and evaluating Decision Tree models. It includes the implementation of repeated stratified k-fold cross-validation (5 folds, 100 repetitions with different random seeds), metric calculations (Accuracy, AUC-ROC, F1-score, Precision, Recall), and performance aggregation. The encapsulation facilitates code reuse and modular analysis.
+  
+- **`pICoP_search.py`**  
+  This script implements a systematic computational search to identify the optimal weighted linear combination of cellular immune biomarkers (%CD8⁺, %CD4⁺, and %CD11b⁺Gr-1⁺ MDSC-like cells). It exhaustively evaluates all possible weight combinations within a specified range using a simple decision stump model. The resulting composite biomarker, named **pICoP** (2 × %CD8⁺ + %CD4⁺ − %CD11b⁺Gr-1⁺), was selected for its superior predictive performance (high F1-Score and AUC-ROC), simplicity, and statistical significance confirmed by a permutation test (p < 0.05). This approach validates the initial biologically driven design.
+
+---
+
+### 📊 Data Availability
+The dataset is publicly available at:
+- [Zenodo DOI: 10.5281/zenodo.16281869](https://doi.org/10.5281/zenodo.16281869)  
+- Included in this repository.
+
+---
+
+### ⚙️ Requirements
+Main package versions used:
+- Python 3.12.1  
+- NumPy 2.0.2  
+- Pandas 2.2.3  
+- Scikit-learn 1.5.2  
+- Matplotlib 3.9.3
+- Joblib 1.4.2
+- tqdm 4.67.1  
+
+---
+
 ### 📌 Background
 Chagas disease, caused by the protozoan parasite *Trypanosoma cruzi*, remains a major public health concern in Latin America, with no licensed vaccine available. Identifying **correlates of protection (CoPs)** — measurable immune parameters that predict vaccine efficacy — can accelerate vaccine development. While most known CoPs are antibody-based, they have not been validated in *T. cruzi* vaccine research. This work explores the use of **cellular immune biomarkers** as alternative CoPs.
 
@@ -16,13 +57,6 @@ Chagas disease, caused by the protozoan parasite *Trypanosoma cruzi*, remains a 
 - **Biomarker acquisition**: Percentages of CD4⁺, CD8⁺, and CD11b⁺Gr-1⁺ cells measured by flow cytometry from peripheral blood.
 - **Outcome**: Survival at day 25 post-*T. cruzi* challenge.
 - **Analysis approach**: Machine Learning (ML) with Decision Tree models to identify and evaluate potential CoPs.
-
----
-
-### 📂 Repository Contents – *Start with the Jupyter Notebook*
-- **Notebook**: Jupyter Notebook illustrating the complete analysis workflow. Start here to follow all steps, from exploratory analysis to model evaluation.
-- **Code**: Python scripts to process biomarker data, perform biomarker engineering, train Decision Tree models, evaluate predictive performance with cross-validation, and perform the computational search for a potential integrative correlate of protection.
-- **Data**: Preprocessed datasets for reproducibility.
 
 ---
 
@@ -46,28 +80,6 @@ C) **Machine learning analysis** – The dataset was used to train and test a De
 - The pICoP significantly enhanced a simple one-level Decision Tree’s predictive performance:
   - **Accuracy**: ~0.86
   - **AUC-ROC**: ~0.87
-
----
-
-### 📊 Data Availability
-The dataset is publicly available at:
-- [Zenodo DOI: 10.5281/zenodo.16281869](https://doi.org/10.5281/zenodo.16281869)  
-- Included in this repository.
-
----
-
-### 💻 Repository Code Structure
-
-This repository includes two main Python scripts and one Jupyter Notebook, each with specific roles in the analysis workflow:
-
-- **`notebook_CoPs_ML.ipynb`**  
-  The notebook orchestrates the overall analysis by loading the processed data, invoking the model defined in `biomarker_decision_tree.py`, and running the evaluation workflow. It generates visualizations and summarizes results in an accessible and reproducible format. Ensure that `biomarker_decision_tree.py` is located in the same directory or accessible in the Python path for proper import.
-
-- **`biomarker_decision_tree.py`**  
-  This script defines the `BiomarkerDecisionTree` class, encapsulating the machine learning pipeline for training, validating, and evaluating Decision Tree models. It includes the implementation of repeated stratified k-fold cross-validation (5 folds, 100 repetitions with different random seeds), metric calculations (Accuracy, AUC-ROC, F1-score, Precision, Recall), and performance aggregation. The encapsulation facilitates code reuse and modular analysis.
-  
-- **`pICoP_search.py`**  
-  This script implements a systematic computational search to identify the optimal weighted linear combination of cellular immune biomarkers (%CD8⁺, %CD4⁺, and %CD11b⁺Gr-1⁺ MDSC-like cells). It exhaustively evaluates all possible weight combinations within a specified range using a simple decision stump model. The resulting composite biomarker, named **pICoP** (2 × %CD8⁺ + %CD4⁺ − %CD11b⁺Gr-1⁺), was selected for its superior predictive performance (high F1-Score and AUC-ROC), simplicity, and statistical significance confirmed by a permutation test (p < 0.05). This approach validates the initial biologically driven design.
 
 ---
 
@@ -113,18 +125,6 @@ The analysis implemented in this repository follows a **nested repetition–fold
 - Reduces overfitting risk by repeatedly evaluating on unseen data.
 - Produces **stable performance estimates** less dependent on a single split.
 - Allows for **statistical characterization** of metric variability.
-
----
-
-### ⚙️ Requirements
-Main package versions used:
-- Python 3.12.1  
-- NumPy 2.0.2  
-- Pandas 2.2.3  
-- Scikit-learn 1.5.2  
-- Matplotlib 3.9.3
-- Joblib 1.4.2
-- tqdm 4.67.1  
 
 ---
 
