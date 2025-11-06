@@ -1,9 +1,10 @@
-## Machine Learning to Integrate Cellular Immune Biomarkers to Identify Potential Correlates of Protection for a *Trypanosoma cruzi* Vaccine
+# Identification of Correlates of Protection for Vaccines against Trypanosoma cruzi using Machine Learning
 
 This repository contains the code and datasets associated with the research work:
 
 > Gamba et al., *Integrating Cellular Immune Biomarkers with Machine Learning to Identify Potential Correlates of Protection for a Trypanosoma cruzi Vaccine*.
-
+> Published: 28 August 2025.
+> Vaccines 2025, 13(9), 915. [DOI](https://doi.org/10.3390/vaccines13090915). Special Issue: Human Immune Responses to Infection and Vaccination
 ---
 
 ### 📂 Repository Contents – *Start with the Jupyter Notebook*
