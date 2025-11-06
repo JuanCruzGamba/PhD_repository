@@ -3,14 +3,54 @@
 This repository contains the code and datasets associated with the research work:
 
 > Gamba et al., *Integrating Cellular Immune Biomarkers with Machine Learning to Identify Potential Correlates of Protection for a Trypanosoma cruzi Vaccine*.
+> 
 > Published: 28 August 2025.
+> 
 > Vaccines 2025, 13(9), 915. [DOI](https://doi.org/10.3390/vaccines13090915). Special Issue: Human Immune Responses to Infection and Vaccination
+
 ---
 
-### 📂 Repository Contents – *Start with the Jupyter Notebook*
-- **Notebook**: Jupyter Notebook illustrating the complete analysis workflow. Start here to follow all steps, from exploratory analysis to model evaluation.
+### 📂 Repository Contents:
+- **Notebook**: Jupyter Notebook illustrating the complete analysis workflow, from exploratory analysis to model evaluation.
 - **Code**: Python scripts to process biomarker data, perform biomarker engineering, train Decision Tree models, evaluate predictive performance with cross-validation, and perform the computational search for a potential integrative correlate of protection.
 - **Data**: Preprocessed datasets for reproducibility.
+
+This repository is designed to be accessible to researchers with little or no programming experience, particularly immunologists and biologists interested in learning how machine learning can be applied to immunological data.
+
+All scripts include extensive comments and explanations, guiding the reader step by step through the data analysis, model building, and evaluation process. The goal is to make the computational workflow transparent, reproducible, and educational, bridging the gap between biological experimentation and data-driven modeling.
+
+---
+
+### 🚀 Quick Start Guide For Final Users (No Programming Experience Required)
+
+#### Step 1: Get the Tool
+1. Download this repository.
+2. [Install Python 3.8+](https://www.python.org/downloads/) and [Jupyter Notebook or Jupyter Lab](https://jupyter.org/install).
+3. Install required packages. The version of each package is listed below.
+
+For detailed instructions on how to install packages using `pip`, please refer to the official documentation (https://packaging.python.org/en/latest/tutorials/installing-packages/)
+
+#### Step 2: Get the Data
+The analysis requires a `dataset.csv` file in the same directory as the notebook. You can:
+- **Use the provided file**: Already included in this repository, or
+- **Download from Zenodo**: (https://zenodo.org/records/16281869)
+
+#### Step 3: Run the Analysis
+1. Open `notebook_CoPs_ML_v1.ipynb` in Jupyter Notebook or [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JuanCruzGamba/PhD_repository/blob/main/publication_projects/integrative_CoP_with_ML/notebook_CoPs_ML_v1.ipynb) (remember also upload `dataset.csv` to Colab)
+
+2. Execute all cells step by step.
+3. Get your **pICoP scores** and protection predictions!
+
+#### Step 4: Interpret Your Results
+- **pICoP Score:** Your integrated biomarker for each animal
+- **Threshold:** Values ≥30.57 suggest higher survival probability
+- **Performance Metrics:** How well the model works with your data
+
+### 💻 For Experienced Users
+1. Clone repository: `git clone [repository-url]`
+2. Ensure `dataset.csv` is in the working directory (included in repo or download from Zenodo)
+3. Install dependencies.
+4. Run analysis.
 
 ---
 
@@ -131,4 +171,8 @@ The analysis implemented in this repository follows a **nested repetition–fold
 
 ### 📜 Citation
 If you use this code or data, please cite our work:  
-Gamba et al., *Integrating Cellular Immune Biomarkers with Machine Learning to Identify Potential Correlates of Protection for a Trypanosoma cruzi Vaccine*. 
+Gamba, J. C., Borgna, E., Prochetto, E., Pérez, A. R., Batista-Duharte, A., Marcipar, I., Gerard, M., & Cabrera, G. (2025). Integrating Cellular Immune Biomarkers with Machine Learning to Identify Potential Correlates of Protection for a Trypanosoma cruzi Vaccine. Vaccines, 13(9), 915. https://doi.org/10.3390/vaccines13090915 
+
+--- 
+
+**⚠️ Disclaimer:** This tool is for research purposes only. Results should be validated in appropriate experimental systems before application. The authors are not responsible for misuse or misinterpretation of results.
