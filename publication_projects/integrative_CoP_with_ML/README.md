@@ -42,7 +42,7 @@ The analysis requires a `dataset.csv` file in the same directory as the notebook
 3. Get your **pICoP scores** and protection predictions!
 
 #### Step 4: Interpret Your Results
-- **pICoP Score:** Your integrated biomarker for each animal
+- **pICoP Score:** Your integrated biomarker
 - **Threshold:** Values ≥30.57 suggest higher survival probability
 - **Performance Metrics:** How well the model works with your data
 
