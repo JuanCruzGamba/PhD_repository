@@ -46,7 +46,7 @@ The analysis requires a `dataset.csv` file in the same directory as the notebook
 - **Threshold:** Values ≥30.57 suggest higher survival probability
 - **Performance Metrics:** How well the model works with your data
 
-### 💻 For Experienced Users
+### For Experienced Users
 1. Clone repository: `git clone [repository-url]`
 2. Ensure `dataset.csv` is in the working directory (included in repo or download from Zenodo)
 3. Install dependencies.
