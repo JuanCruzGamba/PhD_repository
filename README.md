@@ -12,8 +12,4 @@ Research Focus:
 
 👋 If you share an interest in AI, data science, or biological modeling, feel free to explore this repository or connect with me!
 
-[Linkedin](www.linkedin.com/in/juan-cruz-gamba)
-
-[Research Gate](https://www.researchgate.net/profile/Juan-Gamba-7?ev=hdr_xprf)
-
-[X](https://x.com/juancruzgamba)
+[Linkedin](www.linkedin.com/in/juan-cruz-gamba)  |  [Research Gate](https://www.researchgate.net/profile/Juan-Gamba-7?ev=hdr_xprf)  |  [X](https://x.com/juancruzgamba)
